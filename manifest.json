@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "谷歌搜索语言转换工具 @小傅哥",
+  "version": "1.0",
+  "description": "将谷歌搜索中检索内容，快捷转换为用户指定的语言。请在插件【选项】中配置。",
+  "permissions": ["activeTab", "commands", "scripting", "storage"],
+  "host_permissions": ["https://api.mymemory.translated.net/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "translate": {
+      "suggested_key": {
+        "default": "Ctrl+E",
+        "mac": "Command+E"
+      },
+      "description": "将搜索关键词转换为指定语言"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

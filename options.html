@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>谷歌搜索语言转换工具 - 搜索转换配置</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div class="container">
+    <h1>谷歌搜索语言转换工具 - 搜索转换配置</h1>
+
+    <div class="config-form">
+        <div class="form-group">
+            <label>快捷键组合：</label>
+            <input type="text" id="hotkeyInput" placeholder="按下组合键（如 Ctrl/Command+E）" readonly>
+            <div class="modifiers">
+                <label><input type="checkbox" id="ctrlCheck"> Ctrl</label>
+                <label><input type="checkbox" id="altCheck"> Alt</label>
+                <label><input type="checkbox" id="shiftCheck"> Shift</label>
+                <label><input type="checkbox" id="cmdCheck"> Cmd</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>转目标语言：</label>
+            <select id="langSelect">
+                <option value="en">英语</option>
+                <option value="fr">法语</option>
+                <option value="de">德语</option>
+                <option value="ja">日语</option>
+                <option value="ru">俄语</option>
+            </select>
+        </div>
+
+        <button id="addBtn">添加配置</button>
+    </div>
+
+    <div class="config-list">
+        <h2>当前配置</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>快捷键</th>
+                <th>目标语言</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="configTable"></tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>作者：小傅哥 | 版本 v1.0</p>
+        <p>使用说明：在Google搜索页面输入内容后，按下配置的快捷键即可自动转换</p>
+    </div>
+</div>
+<script src="options.js"></script>
+</body>
+</html>
