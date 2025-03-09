@@ -3,7 +3,7 @@
   "name": "谷歌搜索语言转换工具 @小傅哥",
   "version": "1.0",
   "description": "将谷歌搜索中检索内容，快捷转换为用户指定的语言。请在插件【选项】中配置。",
-  "permissions": ["activeTab", "commands", "scripting", "storage"],
+  "permissions": ["activeTab", "commands", "storage"],
   "host_permissions": ["https://api.mymemory.translated.net/*"],
   "background": {
     "service_worker": "background.js"
